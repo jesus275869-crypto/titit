@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Te amooo titi ❤️</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, #ff9a9e, #fecfef, #f5576c);
+      font-family: "Poppins", sans-serif;
+      overflow: hidden;
+    }
+
+    .container { text-align: center; color: #fff; position: relative; }
+
+    #titulo {
+      font-size: 3.5rem;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      animation: glow 2.5s ease-in-out infinite;
+      transition: opacity 1s ease;
+    }
+
+    .sub { margin-top: 10px; font-size: 1.3rem; opacity: 0.9; }
+
+    .big-heart {
+      width: 140px; height: 140px;
+      position: relative;
+      margin: 30px auto 0;
+      transform: rotate(-45deg);
+      background: #ff3366;
+      animation: beat 1s infinite;
+      box-shadow: 0 0 25px rgba(255, 51, 102, 0.7);
+      transition: transform 0.2s ease;
+    }
+
+    .big-heart:hover { transform: rotate(-45deg) scale(1.15); cursor: pointer; }
+
+    .big-heart::before, .big-heart::after {
+      content: "";
+      width: 140px; height: 140px;
+      background: #ff3366;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .big-heart::before { top: -70px; left: 0; }
+    .big-heart::after { left: 70px; top: 0; }
+
+    .heart {
+      position: absolute;
+      color: #ffebf0;
+      font-size: 22px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0;
+    }
+
+    .heart:nth-child(1) { left: 5%; animation-delay: 0s; }
+    .heart:nth-child(2) { left: 15%; animation-delay: 1s; }
+    .heart:nth-child(3) { left: 25%; animation-delay: 2s; }
+    .heart:nth-child(4) { left: 35%; animation-delay: 3s; }
+    .heart:nth-child(5) { left: 45%; animation-delay: 4s; }
+    .heart:nth-child(6) { left: 55%; animation-delay: 5s; }
+    .heart:nth-child(7) { left: 65%; animation-delay: 1.5s; }
+    .heart:nth-child(8) { left: 75%; animation-delay: 2.5s; }
+    .heart:nth-child(9) { left: 85%; animation-delay: 3.5s; }
+    .heart:nth-child(10) { left: 92%; animation-delay: 4.5s; }
+
+    @keyframes beat {
+      0%, 100% { transform: rotate(-45deg) scale(1); }
+      25% { transform: rotate(-45deg) scale(1.1); }
+      50% { transform: rotate(-45deg) scale(0.95); }
+      75% { transform: rotate(-45deg) scale(1.08); }
+    }
+
+    @keyframes floatUp {
+      0% { bottom: -10%; opacity: 0; transform: translateX(0) scale(0.8); }
+      20% { opacity: 1; }
+      100% { bottom: 110%; opacity: 0; transform: translateX(-20px) scale(1.4); }
+    }
+
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 8px white, 0 0 18px #ff3366; }
+      50% { text-shadow: 0 0 3px white, 0 0 10px #ff3366; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1 id="titulo">TE AMOOO TITI ❤️</h1>
+    <p class="sub">Eres mi vida, mi cielo, mi todo.</p>
+
+    <br><br><br><br>
+
+    <!-- AHORA SÍ: LINK AL JUEGUITO -->
+    <a href="JUEGUITO.html">
+      <div class="big-heart"></div>
+    </a>
+
+    <span class="heart">❤</span>
+    <span class="heart">💖</span>
+    <span class="heart">💘</span>
+    <span class="heart">💕</span>
+    <span class="heart">💗</span>
+    <span class="heart">💞</span>
+    <span class="heart">❤️</span>
+    <span class="heart">💓</span>
+    <span class="heart">💟</span>
+    <span class="heart">❣️</span>
+
+  </div>
+
+  <script>
+    const frases = [
+      "TE AMOOO TITI ❤️",
+      "TE ADORO ❤️",
+      "ERES MI VIDA ❤️",
+      "GRACIAS POR EXISTIR ❤️",
+      "ERES LO MEJOR QUE TENGO ❤️"
+    ];
+
+    let i = 0;
+    const titulo = document.getElementById("titulo");
+
+    setInterval(() => {
+      titulo.style.opacity = 0;
+
+      setTimeout(() => {
+        i = (i + 1) % frases.length;
+        titulo.textContent = frases[i];
+        titulo.style.opacity = 1;
+      }, 800);
+
+    }, 2500);
+  </script>
+
+</body>
+</html>

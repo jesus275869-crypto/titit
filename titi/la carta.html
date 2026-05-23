@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para ti, mi amor ❤️</title>
+
+<!-- BOOTSTRAP -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #ff9a9e, #fecfef, #f5576c);
+    background-size: 400% 400%;
+    animation: fondoAnimado 12s ease infinite;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    text-align: center;
+    transition: background 1s ease;
+  }
+
+  @keyframes fondoAnimado {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .noche {
+    background: linear-gradient(120deg, #000428, #004e92);
+    background-size: 400% 400%;
+    animation: fondoAnimado 12s ease infinite;
+  }
+
+  h1 {
+    margin-top: 40px;
+    font-size: 2.8rem;
+    animation: glow 2s infinite;
+    cursor: pointer;
+  }
+
+  @keyframes glow {
+    0%, 100% { text-shadow: 0 0 10px white, 0 0 20px #ff3366; }
+    50% { text-shadow: 0 0 5px white, 0 0 10px #ff3366; }
+  }
+
+  #corazonFinal {
+    margin-top: 20px;
+    font-size: 4.5rem;
+    animation: latido 1.5s infinite;
+    cursor: pointer;
+  }
+
+  @keyframes latido {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+  }
+
+  #carta {
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    white-space: pre-line;
+    text-shadow: 0 0 5px rgba(0,0,0,0.3);
+    min-height: 300px;
+  }
+
+  .mini {
+    position: fixed;
+    font-size: 30px;
+    animation: volar 1.5s forwards;
+    pointer-events: none;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+  }
+
+  @keyframes volar {
+    from { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    to { opacity: 0; transform: translate(var(--x), var(--y)) scale(2); }
+  }
+
+  #botonFinal {
+    display: inline-block;
+    margin: 40px auto;
+    background: white;
+    color: #ff3366;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(255,255,255,0.7);
+    transition: 0.3s;
+  }
+
+  #botonFinal:hover {
+    background: #ffe6ee;
+    transform: scale(1.1);
+  }
+</style>
+</head>
+
+<body>
+
+<!-- Música -->
+<audio id="musica" autoplay loop muted>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7e8e3f3c8e.mp3?filename=romantic-soft-piano-110624.mp3" type="audio/mpeg">
+</audio>
+
+<h1 id="titulo">Para ti, mi amor ❤️</h1>
+
+<div id="corazonFinal">💖</div>
+
+<div id="carta"></div>
+
+<a id="botonFinal" href="finalll bummmmmm.html">Ir al final ❤️</a>
+
+<script>
+  /* Activar música con un toque */
+  document.addEventListener("click", () => {
+    document.getElementById("musica").muted = false;
+  }, { once: true });
+
+  /* Modo noche */
+  document.getElementById("titulo").addEventListener("click", () => {
+    document.body.classList.toggle("noche");
+  });
+
+  /* Corazones volando */
+  const corazon = document.getElementById("corazonFinal");
+  corazon.addEventListener("click", () => {
+    const cantidad = 80;
+
+    for (let i = 0; i < cantidad; i++) {
+      let mini = document.createElement("div");
+      mini.classList.add("mini");
+      mini.innerHTML = "💖";
+
+      const x = (Math.random() - 0.5) * 2000;
+      const y = (Math.random() - 0.5) * 2000;
+
+      mini.style.setProperty("--x", x + "px");
+      mini.style.setProperty("--y", y + "px");
+
+      document.body.appendChild(mini);
+
+      setTimeout(() => mini.remove(), 1500);
+    }
+  });
+
+  /* Texto de la carta + AUTO-SCROLL VERTICAL */
+  const cartaTexto = `
+Mi amor…
+
+Hoy se cumplen 2 meses desde que empezamos a caminar juntos,
+y no puedo explicar lo feliz que me hace tenerte.
+
+Cada día con vos se siente especial,
+cada mensaje, cada risa, cada momento.
+
+Gracias por elegirme,
+por quedarte,
+por hacerme sentir querido.
+
+Dos meses… y ya siento que esto recién empieza.
+
+Te adoro con todo mi corazón.
+
+
+Si llegaste hasta acá…
+quiero que sepas algo que no siempre sé decir con palabras.
+No hice esta página para impresionarte,
+la hice porque vos me inspirás.
+
+Sos la luz de mis ojos,
+la persona que me hace ver el mundo un poquito más lindo cada día.
+
+No sé si alguna vez te lo dije así,
+pero te amo de una forma que nunca antes amé.
+No es un amor rápido ni vacío,
+es un amor que me nace del pecho,
+que me calma, que me mueve, que me hace querer ser mejor.
+
+Gracias por ser mi lugar seguro,
+mi alegría inesperada,
+mi persona favorita.
+
+Gracias por estos dos meses,
+por cada risa, cada mensaje,
+por todo lo que sos y todo lo que me das sin darte cuenta.
+
+A veces pienso que el mundo es enorme,
+pero aun así tuve la suerte de cruzarme con vos.
+
+No sos solo la luz de mis ojos,
+sos la calma en mis días,
+la sonrisa que aparece sin que la busque,
+y el motivo por el que creo que lo bueno siempre vuelve.
+
+Ojalá sigamos escribiendo esta historia,
+despacito, pero juntos.
+`;
+
+  let i = 0;
+  const cartaDiv = document.getElementById("carta");
+
+  function escribirCarta() {
+    if (i < cartaTexto.length) {
+      cartaDiv.innerHTML += cartaTexto.charAt(i);
+      i++;
+
+      // AUTO-SCROLL VERTICAL SUAVE
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+      });
+
+      setTimeout(escribirCarta, 40);
+    }
+  }
+
+  escribirCarta();
+</script>
+
+</body>
+</html>
